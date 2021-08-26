@@ -4,13 +4,14 @@
   </div>
 </div>
 
+<% @courses.each do |course| %>
  
 <div class="row">
   <div class="col s6 m6">
     <div class="card blue-grey darken-1">
       <div class="card-content white-text">
-        <span class="card-title">Code: CS50x</span>
-        <p>A comprehensive introduction to computer science.</p>
+        <span class="card-title"><%= course.short_name %></span>
+        <p><%= course.description%></p>
       </div>
       <div class="card-action">
         <a href="#">Enroll</a>
@@ -18,42 +19,4 @@
       </div>
     </div>
   </div>
-  <div class="col s6 m6">
-    <div class="card blue-grey darken-1">
-      <div class="card-content white-text">
-        <span class="card-title">Code: CS50W</span>
-        <p>Web programming with Python and Javascript.</p>
-      </div>
-      <div class="card-action">
-        <a href="#">Enroll</a>
-        <a href="#">More information</a>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col s6 m6">
-    <div class="card blue-grey darken-1">
-      <div class="card-content white-text">
-        <span class="card-title">Code: CS50x</span>
-        <p>A comprehensive introduction to computer science.</p>
-      </div>
-      <div class="card-action">
-        <a href="#">Enroll</a>
-        <a href="#">More information</a>
-      </div>
-    </div>
-  </div>
-  <div class="col s6 m6">
-    <div class="card blue-grey darken-1">
-      <div class="card-content white-text">
-        <span class="card-title">Code: CS50W</span>
-        <p>Web programming with Python and Javascript.</p>
-      </div>
-      <div class="card-action">
-        <a href="#">Enroll</a>
-        <a href="#">More information</a>
-      </div>
-    </div>
-  </div>
-</div>
+<% end %>
