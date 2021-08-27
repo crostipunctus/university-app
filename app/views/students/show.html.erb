@@ -16,7 +16,7 @@
         <p><%= @student.email %></p>
       </div>
       <div class="card-action">
-        <a href="#">Enroll</a>
+        <%= link_to "Edit profile", edit_student_path(@student.id) %>
         <a href="#">More information</a>
       </div>
     </div>
