@@ -1,14 +1,23 @@
 
 
-        <%= form_for @student do |f|%>
-          <%= f.label :name %>
-          <%= f.text_field :name %>
+  <%= form_for @student do |f|%>
+  <div class="row">
+    <div class="input-field col s6">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
 
-          <%= f.label :email %>
-          <%= f.email_field :email %>
-
-          <%= f.label :password %>
-          <%= f.password_field :password %>
-
-          <%= f.submit class: "waves-effect waves-light btn"%>
-        <% end %>
+    <div class="input-field col s6" >
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="input-field col s12">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+  </div>
+    <%= f.submit class: "waves-effect waves-light btn"%>
+  <% end %>
