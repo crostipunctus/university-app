@@ -16,7 +16,9 @@
         <p><%= @student.email %></p>
       </div>
       <div class="card-action">
+      <% if @student == current_student %>
         <%= link_to "Edit profile", edit_student_path(@student.id) %>
+      <% end %>
         <a href="#">More information</a>
       </div>
     </div>
