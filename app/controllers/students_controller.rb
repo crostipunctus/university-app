@@ -1,8 +1,6 @@
 class StudentsController < ApplicationController
-  before_action :require_student
+  before_action :require_student, except: [:new, :create]
   before_action :require_same_student, only: [:edit, :update, :destroy]
-  
-  
   
   def index 
     @students = Student.all
@@ -19,6 +17,7 @@ class StudentsController < ApplicationController
   def create 
     @student = Student.new(student_params) 
     if @student.save 
+      session[:student_id] = @student.id
       flash[:notice] = "Student succesfully created"
       redirect_to @student
     else 
@@ -41,7 +40,7 @@ class StudentsController < ApplicationController
     end
 
   end
-  
+ 
 
   private
 
